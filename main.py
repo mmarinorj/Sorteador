@@ -17,9 +17,9 @@ import copy
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(565, 378)
-        MainWindow.setMinimumSize(QtCore.QSize(565, 378))
-        MainWindow.setMaximumSize(QtCore.QSize(565, 378))
+        MainWindow.resize(565, 361)
+        MainWindow.setMinimumSize(QtCore.QSize(565, 361))
+        MainWindow.setMaximumSize(QtCore.QSize(565, 361))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("sorteio.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -34,29 +34,29 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setStyleSheet("QTabBar::tab {\n"
-"   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"                                      stop:0 #20301d, stop: 0.5 #386231,\n"
-"                                      stop: 0.6 #20301d, stop:1 #20301d);\n"
-"   color: rgb(255,255,255);\n"
-"    border: 1px solid  rgb(73, 127, 63);\n"
-"    border-bottom-color: rgb(73, 127, 63); /* same as the pane color */\n"
-"    border-top-left-radius: 2px;\n"
-"    border-top-right-radius: 2px;\n"
-"    min-width:14ex;\n"
-"    padding: 6px;\n"
-"}\n"
-"QTabBar::tab:selected {\n"
-"   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"                                      stop:0 #497f3f, stop: 0.5 rgb(65, 113, 56),\n"
-"                                      stop: 0.6 #497f3f, stop:1 #497f3f);\n"
-"  /* background: rgb(73, 127, 63);*/\n"
-"   color: rgb(255,255,255);\n"
-"   \n"
-"}\n"
-"\n"
-"QTabWidget::pane {\n"
-"    border: 2px solid rgb(73, 127, 63);\n"
-"}")
+        "   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+        "                                      stop:0 #20301d, stop: 0.5 #386231,\n"
+        "                                      stop: 0.6 #20301d, stop:1 #20301d);\n"
+        "   color: rgb(255,255,255);\n"
+        "    border: 1px solid  rgb(73, 127, 63);\n"
+        "    border-bottom-color: rgb(73, 127, 63); /* same as the pane color */\n"
+        "    border-top-left-radius: 2px;\n"
+        "    border-top-right-radius: 2px;\n"
+        "    min-width:14ex;\n"
+        "    padding: 6px;\n"
+        "}\n"
+        "QTabBar::tab:selected {\n"
+        "   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+        "                                      stop:0 #497f3f, stop: 0.5 rgb(65, 113, 56),\n"
+        "                                      stop: 0.6 #497f3f, stop:1 #497f3f);\n"
+        "  /* background: rgb(73, 127, 63);*/\n"
+        "   color: rgb(255,255,255);\n"
+        "   \n"
+        "}\n"
+        "\n"
+        "QTabWidget::pane {\n"
+        "    border: 2px solid rgb(73, 127, 63);\n"
+        "}")
         self.tabWidget.setObjectName("tabWidget")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -280,10 +280,6 @@ class Ui_MainWindow(object):
         self.statusBar.setInputMethodHints(QtCore.Qt.ImhNone)
         self.statusBar.setObjectName("statusBar")
         MainWindow.setStatusBar(self.statusBar)
-        self.actionSair = QtWidgets.QAction(MainWindow)
-        self.actionSair.setObjectName("actionSair")
-        self.menuArquivo.addAction(self.actionSair)
-        self.menuBar.addAction(self.menuArquivo.menuAction())
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -311,10 +307,8 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "ADICIONAR"))
         self.pushButton_3.setText(_translate("MainWindow", "CARREGAR"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Ajustes"))
-        self.menuArquivo.setTitle(_translate("MainWindow", "Arquivo"))
-        self.actionSair.setText(_translate("MainWindow", "Sair"))
-        ################################ INICIO BLOCO PRÓPRIO ##################################################################
-        self.statusBar.showMessage("*****Contatos: @mmarinorj | mmarinorj@gmail.com (e-mail / PIX) | www.github."
+################################ INICIO BLOCO PRÓPRIO ##################################################################
+        self.statusBar.showMessage("   *****Contatos: @mmarinorj | mmarinorj@gmail.com (e-mail / PIX) | www.github."
                                    "com/mmarinorj*****")
         self.statusBar.setStyleSheet("color: black")
         self.lcdNumber.display("0000")
@@ -400,7 +394,6 @@ class Ui_MainWindow(object):
             temp = self.tableWidget.rowCount()
             self.base.clear()
             self.temp.clear()
-            lista_temp = []
             for i in range(temp):
                 if self.tableWidget.item(i, 0) == None:
                     data1 = "0"
