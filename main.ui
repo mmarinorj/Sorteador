@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>565</width>
-    <height>378</height>
+    <height>361</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -620,23 +620,6 @@ color: rgb(0, 0, 0);</string>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>565</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuArquivo">
-    <property name="title">
-     <string>Arquivo</string>
-    </property>
-    <addaction name="actionSair"/>
-   </widget>
-   <addaction name="menuArquivo"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="inputMethodHints">
