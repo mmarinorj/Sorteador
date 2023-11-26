@@ -324,7 +324,7 @@ class Ui_MainWindow(object):
         
         self.timer = QtCore.QTimer(self.centralwidget)
         self.timer.timeout.connect(self.ShowTime)
-        self.timer.start(50)
+        self.timer.start(5)
         self.base = []
         self.temp = []
         self.pushButton.setEnabled(False)
@@ -368,6 +368,12 @@ class Ui_MainWindow(object):
                     self.tabWidget.setEnabled(True)
                     self.pushButton_4.setEnabled(True)
                     self.pushButton_4.setStyleSheet("color: white;")
+                self.lcdNumber.setStyleSheet("color: yellow; background-color: black; border: 3px solid white; "
+                                             "border-radius: 10px;")
+                self.radioButton.setEnabled(False)
+                self.radioButton_2.setEnabled(False)
+                self.radioButton_3.setEnabled(False)
+                self.radioButton_4.setEnabled(False)
                 # if not self.flag1:
                 #     self.ding1.play()
         else:
@@ -378,7 +384,8 @@ class Ui_MainWindow(object):
                 self.lcdNumber.display(self.contador1)
                 if self.contador1 > 9999:
                     self.contador1 = 3157
-            if int(time.time()) - self.tempo == 1:
+            # if int(time.time()) - self.tempo == 1:
+            if self.flag2:
                 self.flag2 = False
                 self.lcdNumber.display(self.sorteado[0])
                 self.label.setText(self.sorteado[1])
